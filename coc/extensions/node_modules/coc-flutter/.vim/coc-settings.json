@@ -1,0 +1,25 @@
+{
+  "coc.preferences.formatOnSaveFiletypes": [
+    "typescript"
+  ],
+  "prettier.eslintIntegration": true,
+  "eslint.autoFixOnSave": true,
+  "cSpell.words": [
+    "Autocmd",
+    "Unimported",
+    "conceallevel",
+    "cursorcolumn",
+    "cursorline",
+    "esbuild",
+    "foldcolumn",
+    "getlog",
+    "outchannel",
+    "outfile",
+    "pubspec",
+    "regist",
+    "relativenumber",
+    "signcolumn",
+    "sourcemap",
+    "winhighlight"
+  ]
+}
