@@ -863,11 +863,10 @@
           "sysPrefix": "/usr",
           "fileHash": "a7290f5d8f68cfef5db3b6432f4f00fc7846e44ca9c5d5e9799f871552a4f2c5496e7b2ae08dd34b30f56f6af752286c3c3321ce3a7c1533cd0e87db40ee504d",
           "type": "Unknown",
-          "displayName": "Python 3.8.10 64-bit",
-          "__store": true
+          "displayName": "Python 3.8.10 64-bit"
         }
       },
-      "expiry": 1642264512988
+      "expiry": 1642312477366
     },
     "/usr/bin/python2.interpreter.Details.v7": {
       "data": {
@@ -1199,5 +1198,11 @@
     },
     "INTERPRETERS_CACHE_v3_PipEnvService": [],
     "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": []
+  },
+  "coc-python|/home/reaperfs/.dotfiles": {
+    "INTERPRETERS_CACHE_v3_PipEnvService": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService": [],
+    "INTERPRETERS_CACHE_v3_PipEnvService:5bd79e36c6d6afc2f9a243da11aebbc1": [],
+    "INTERPRETERS_CACHE_v3_WorkspaceVirtualEnvService:5bd79e36c6d6afc2f9a243da11aebbc1": []
   }
 }

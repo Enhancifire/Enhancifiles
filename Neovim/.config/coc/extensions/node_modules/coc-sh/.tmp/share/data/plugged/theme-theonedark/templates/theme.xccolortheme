@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?> <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd"> <plist version="1.0"> <dict> <key>DVTConsoleDebuggerInputTextColor</key> <string>{{.White.Xcode 1}}</string> <key>DVTConsoleDebuggerInputTextFont</key> <string>SFMono-Bold - 11.0</string> <key>DVTConsoleDebuggerOutputTextColor</key> <string>{{.White.Xcode 1}}</string> <key>DVTConsoleDebuggerOutputTextFont</key> <string>SFMono-Regular - 11.0</string> <key>DVTConsoleDebuggerPromptTextColor</key> <string>{{.White.Xcode 1}}</string> <key>DVTConsoleDebuggerPromptTextFont</key> <string>SFMono-Bold - 11.0</string> <key>DVTConsoleExectuableInputTextColor</key> <string>{{.White.Xcode 1}}</string> <key>DVTConsoleExectuableInputTextFont</key> <string>SFMono-Regular - 11.0</string>
+	<key>DVTConsoleExectuableOutputTextColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTConsoleExectuableOutputTextFont</key>
+	<string>SFMono-Bold - 11.0</string>
+	<key>DVTConsoleTextBackgroundColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTConsoleTextInsertionPointColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTConsoleTextSelectionColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTDebuggerInstructionPointerColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTFontAndColorVersion</key>
+	<integer>1</integer>
+	<key>DVTMarkupTextBackgroundColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextBorderColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextCodeFont</key>
+	<string>SFMono-Regular - 10.0</string>
+	<key>DVTMarkupTextEmphasisColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextEmphasisFont</key>
+	<string>.SFNSText-Italic - 10.0</string>
+	<key>DVTMarkupTextInlineCodeColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextLinkColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextLinkFont</key>
+	<string>.SFNSText - 10.0</string>
+	<key>DVTMarkupTextNormalColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextNormalFont</key>
+	<string>.SFNSText - 10.0</string>
+	<key>DVTMarkupTextOtherHeadingColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextOtherHeadingFont</key>
+	<string>.SFNSText - 14.0</string>
+	<key>DVTMarkupTextPrimaryHeadingColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextPrimaryHeadingFont</key>
+	<string>.SFNSDisplay - 24.0</string>
+	<key>DVTMarkupTextSecondaryHeadingColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextSecondaryHeadingFont</key>
+	<string>.SFNSText - 18.0</string>
+	<key>DVTMarkupTextStrongColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTMarkupTextStrongFont</key>
+	<string>.SFNSText-Bold - 10.0</string>
+	<key>DVTScrollbarMarkerAnalyzerColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerBreakpointColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerDiffColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerDiffConflictColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerErrorColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerRuntimeIssueColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTScrollbarMarkerWarningColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTSourceTextBackground</key>
+  <string>{{.Black.Xcode 1}}</string>
+	<key>DVTSourceTextBlockDimBackgroundColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTSourceTextCurrentLineHighlightColor</key>
+  <string>{{.CursorLine.Background.Xcode 1}}</string>
+	<key>DVTSourceTextInsertionPointColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTSourceTextInvisiblesColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTSourceTextSelectionColor</key>
+	<string>{{.White.Xcode 1}}</string>
+	<key>DVTSourceTextSyntaxColors</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>{{.Red.Xcode 1}}</string>
+
+		<key>xcode.syntax.comment</key>
+    <string>{{.Grey.Xcode 1}}</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.declaration.other</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>{{.Cyan.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.class</key>
+		<string>{{.Cyan.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>{{.Cyan.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.constant</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.function</key>
+		<string>{{.Blue.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>{{.Blue.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.macro</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.type</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.identifier.variable</key>
+		<string>{{.White.Xcode 1}}</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.keyword</key>
+		<string>{{.Purple.Xcode 1}}</string>
+
+		<key>xcode.syntax.mark</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.markup.code</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.number</key>
+		<string>{{.DarkYellow.Xcode 1}}</string>
+
+		<key>xcode.syntax.character</key>
+		<string>{{.DarkYellow.Xcode 1}}</string>
+
+		<key>xcode.syntax.plain</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.preprocessor</key>
+		<string>{{.White.Xcode 1}}</string>
+
+		<key>xcode.syntax.string</key>
+		<string>{{.Green.Xcode 1}}</string>
+
+		<key>xcode.syntax.url</key>
+		<string>{{.Cyan.Xcode 1}}</string>
+	</dict>
+	<key>DVTSourceTextSyntaxFonts</key>
+	<dict>
+		<key>xcode.syntax.attribute</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.character</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.comment</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.comment.doc</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.comment.doc.keyword</key>
+		<string>SFMono-Bold - 11.0</string>
+		<key>xcode.syntax.declaration.other</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.declaration.type</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.class</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.class.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.constant</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.constant.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.function</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.function.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.macro</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.macro.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.type</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.type.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.variable</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.identifier.variable.system</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.keyword</key>
+		<string>SFMono-Bold - 11.0</string>
+		<key>xcode.syntax.mark</key>
+		<string>SFMono-Bold - 11.0</string>
+		<key>xcode.syntax.markup.code</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.number</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.plain</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.preprocessor</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.string</key>
+		<string>SFMono-Regular - 11.0</string>
+		<key>xcode.syntax.url</key>
+		<string>SFMono-Regular - 11.0</string>
+	</dict>
+</dict>
+</plist>
+

@@ -1,0 +1,4 @@
+{{ .Body.Background.Hex }},{{ .Body.Background.Hex }},#CAD1D9,#FFFFFF,#FFFFFF,{{ .Body.Foreground.Hex }},#60D156,#FF8669
+
+
+// https://slackthemes.net/#/custom#4F2F4C,452842,8C5888,FFFFFF,3E313C,FFFFFF,00FFB7,DE4C0E

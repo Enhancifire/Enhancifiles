@@ -1,0 +1,6 @@
+github.com/tomnomnom/xtermcolor v0.0.0-20160428124646-b78803f00a7e h1:Ee+VZw13r9NTOMnwTPs6O5KZ0MJU54hsxu9FpZ4pQ10=
+github.com/tomnomnom/xtermcolor v0.0.0-20160428124646-b78803f00a7e/go.mod h1:fSIW/szJHsRts/4U8wlMPhs+YqJC+7NYR+Qqb1uJVpA=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405 h1:yhCVgyC4o1eVCa2tZl7eS0r+SDo693bJlVdllGtEeKM=
+gopkg.in/check.v1 v0.0.0-20161208181325-20d25e280405/go.mod h1:Co6ibVJAznAaIkqp8huTwlJQCZ016jof/cbN4VW5Yz0=
+gopkg.in/yaml.v2 v2.2.2 h1:ZCJp+EgiOT7lHqUV2J862kp8Qj64Jo6az82+3Td9dZw=
+gopkg.in/yaml.v2 v2.2.2/go.mod h1:hI93XBmqTisBFMUTm0b8Fm+jr3Dg1NNxqwp+5A1VGuI=
