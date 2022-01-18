@@ -1,0 +1,9 @@
+pane	100DOC	0	1	:*	0	:/mnt/e/Projects/100\ Days of Code/Day 34/05_CSS_Selectors	1	nvim	:nvim starter.html
+pane	7	0	1	:*	0	:/mnt/e/Projects	1	nvim	:nvim
+pane	base	0	1	:*	0	:/home/reaperfs/Enhancifiles/Neovim/.config/nvim	1	nvim	:nvim
+pane	python	0	1	:*	0	:/mnt/e/Projects	1	nvim	:nvim
+window	100DOC	0	:nvim	1	:*	c4be,179x45,0,0,1	:
+window	7	0	:nvim	1	:*	c4bf,179x45,0,0,2	:
+window	base	0	:nvim	1	:*	fea4,186x4,0,0,7	:
+window	python	0	:nvim	1	:*	bc85,188x43,0,0,8	:
+state	python	

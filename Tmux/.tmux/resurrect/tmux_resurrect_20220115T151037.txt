@@ -1,0 +1,9 @@
+pane	100DOC	0	1	:*	0	:/mnt/e/Projects/100\ Days of Code/Day 34	1	nvim	:nvim index.html
+pane	7	0	1	:*	0	:/home/reaperfs	1	fish	:
+pane	base	0	1	:*	0	:/home/reaperfs	1	nvim	:nvim .tmux.conf
+pane	vim_config	0	1	:*	0	:/home/reaperfs	1	fish	:
+window	100DOC	0	:nvim	1	:*	bc85,188x43,0,0,8	:
+window	7	0	:fish	1	:*	67d2,115x39,0,0,13	:
+window	base	0	:nvim	1	:*	65b4,120x29,0,0,15	:
+window	vim_config	0	:fish	1	:*	bc81,188x43,0,0,4	:
+state	100DOC	

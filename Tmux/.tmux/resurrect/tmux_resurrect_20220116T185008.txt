@@ -1,0 +1,9 @@
+pane	100DOC	0	1	:*	0	:/mnt/e/Projects/100\ Days of Code/Day 34/05_CSS_Selectors	1	nvim	:nvim starter.html
+pane	base	0	1	:*	0	:/home/reaperfs/Enhancifiles/Neovim/.config/nvim	1	nvim	:nvim
+pane	libmansys	0	1	:*	0	:/mnt/e/Projects/Library\ Management System	1	nvim	:nvim
+pane	notion_api	0	1	:*	0	:/mnt/e/Projects/NotionAPI	1	nvim	:nvim schedule.py
+window	100DOC	0	:nvim	1	:*	c4be,179x45,0,0,1	:
+window	base	0	:nvim	1	:*	bc84,188x43,0,0,7	:
+window	libmansys	0	:nvim	1	:*	bc86,188x43,0,0,9	:
+window	notion_api	0	:nvim	1	:*	5e70,188x43,0,0,11	:
+state	base	
