@@ -1,0 +1,9 @@
+pane	100DOC	0	1	:*	0	:/home/reaperfs/Enhancifiles/Neovim/.config/nvim	1	nvim	:nvim init.lua
+pane	cps	0	1	:*	0	:/home/reaperfs/.local/share/nvim	1	fish	:
+pane	live-server	0	1	:*	0	:/mnt/e/Projects/Library\ Management System	1	nvim	:nvim index.html
+pane	notion_api	0	1	:*	0	:/mnt/e/Projects/NotionAPI	1	nvim	:nvim schedule.py
+window	100DOC	0	:nvim	1	:*	adde,87x41,0,0,1	:
+window	cps	0	:fish	1	:*	ade4,87x41,0,0,7	:
+window	live-server	0	:nvim	1	:*	b4c1,179x41,0,0,4	:
+window	notion_api	0	:nvim	1	:*	b4c2,179x41,0,0,5	:
+state	100DOC	cps

@@ -1,0 +1,9 @@
+pane	100DOC	0	1	:*	0	:/home/reaperfs/Enhancifiles/Neovim/.config/nvim/lua/lsp	1	fish	:
+pane	base	0	1	:*	0	:/home/reaperfs	1	fish	:
+pane	cps	0	1	:*	0	:/home/reaperfs/.local/share/nvim	1	fish	:
+pane	live-server	0	1	:*	0	:/mnt/e/Projects/Library\ Management System	1	nvim	:nvim index.js
+window	100DOC	0	:fish	1	:*	c4be,179x45,0,0,1	:
+window	base	0	:fish	1	:*	c4bd,179x45,0,0,0	:
+window	cps	0	:fish	1	:*	caff,120x29,0,0,2	:
+window	live-server	0	:nvim	1	:*	c4c0,179x45,0,0,3	:
+state	base	
