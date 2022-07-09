@@ -6,13 +6,18 @@ if status --is-interactive
 end
 
 # Setting up aliases
-if test -d aliases
-  source aliases/aliases.fish
-  source aliases/arch_packages.fish
-  source aliases/django_aliases.fish
-  source aliases/fedora.fish
-  source aliases/git.fish
-  source aliases/projects.fish
+if test -d ~/.config/fish/aliases
+  source ~/.config/fish/aliases/aliases.fish
+  source ~/.config/fish/aliases/arch_packages.fish
+  source ~/.config/fish/aliases/django_aliases.fish
+  source ~/.config/fish/aliases/fedora.fish
+  source ~/.config/fish/aliases/git.fish
+  source ~/.config/fish/aliases/projects.fish
+end
+
+# Setting up functions
+if test -d ~/.config/fish/functions
+  source ~/.config/fish/functions/testproject.fish
 end
 
 # Add ~/.local/bin to PATH
@@ -37,6 +42,9 @@ set -x NPM_CONFIG_PREFIX "~/.npm-global"
 set -x PATH "~/.npm-global/bin" $PATH
 set -x PATH "/home/fs144/.npm-global/bin" $PATH
 set -x PATH "~/.emacs.d/bin" $PATH
+
+set -x PATH "/home/fs144/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin" $PATH
+set -x EDITOR "/usr/bin/nvim"
 
 ##eval "tmux attach -t base || tmux new -s base"
 
@@ -90,10 +98,6 @@ function copy
     end
 end
 
-
-# Replace some more things with better alternatives
-alias cat='bat --style header --style rules --style snip --style changes --style header'
-[ ! -x /usr/bin/yay ] && [ -x /usr/bin/paru ] && alias yay='paru'
 
 # Get the error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
