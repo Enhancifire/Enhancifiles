@@ -1,79 +1,123 @@
-configuration {
-  display-drun: "Applications:";
-  display-window: "Windows:";
-  display-ssh: "SSH";
-  show-icons: true;
-  drun-display-format: "{icon} {name}";
-}
+/*Dracula theme based on the Purple official rofi theme*/
 
 * {
-  font: "MonoLisa Medium 12";
-  icon-font: "MonoLisa Medium 18";
-  /* padding: 3px 5px; */
-  background-color: #11121DEE;
-  foreground: #A0A8CD;
-  window-bordercolor: #4A5057;
-  color: @foreground;
-  separator-color: @window-bordercolor;
+    font: "Jetbrains Mono 12";
+    foreground: #f8f8f2;
+    background-color: #282a36;
+    active-background: #6272a4;
+    urgent-background: #ff5555;
+    selected-background: @active-background;
+    selected-urgent-background: @urgent-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: @active-background;
 }
 
-
-window {
-  background-color: @background-color;
-  transparency: "real";
-  height: 53%;
-  width: 40%;
-  border-color: @window-bordercolor;
-  border: 2 ;
-  border-radius: 5px;
-  /* margin: 30px 10px 10px 10px; */
+#window {
+    background-color: @background;
+    transparency: "real";
+    border:           1;
+    border-radius: 6;
+    border-color: @bordercolor;
+    padding:          5;
 }
-
-mainbox {
-  background-color: transparent;
-  padding: 30px 30px 30px 30px;
+#mainbox {
+    border:  0;
+    padding: 0;
 }
-
-inputbar {
-  background-color: transparent;
-  padding: 5px 10px 25px 10px;
+#message {
+    border:       1px dash 0px 0px ;
+    border-color: @separatorcolor;
+    padding:      1px ;
 }
-prompt {
-  background-color: transparent;
-  text-color: #FFFFFF;
-  padding: 0px 10px 0px 0px;
+#textbox {
+    text-color: @foreground;
 }
-entry {
-  background-color: transparent;
-  text-color: #FFFFFF;
+#listview {
+    fixed-height: 0;
+    border:       2px dash 0px 0px ;
+    border-color: @bordercolor;
+    spacing:      2px ;
+    scrollbar:    false;
+    padding:      2px 0px 0px ;
 }
-
-listview {
-  background-color: transparent;
-  padding: 0px 5px 0px 5px;
-  spacing: 0.2em;
-  columns: 1;
+#element {
+    border:  0;
+    padding: 1px ;
 }
-
-element {
-  background-color: transparent;
-  padding: 5px 2px 5px 2px;
+#element.normal.normal {
+    background-color: @background;
+    text-color:       @foreground;
 }
-
-element-icon {
-  size: 35px;
-  border: 0px;
+#element.normal.urgent {
+    background-color: @urgent-background;
+    text-color:       @urgent-foreground;
 }
-
-element-text {
-  expand: true;
-  vertical-align: 0.5;
+#element.normal.active {
+    background-color: @active-background;
+    text-color:       @foreground;
 }
-
-element selected {
-  border-radius: 2px;
-  background-color: #9FBBF3;
-  color: @background-color;
+#element.selected.normal {
+    background-color: @selected-background;
+    text-color:       @foreground;
 }
-
-/* vim: ft=css
+#element.selected.urgent {
+    background-color: @selected-urgent-background;
+    text-color:       @foreground;
+}
+#element.selected.active {
+    background-color: @selected-active-background;
+    text-color:       @foreground;
+}
+#element.alternate.normal {
+    background-color: @background;
+    text-color:       @foreground;
+}
+#element.alternate.urgent {
+    background-color: @urgent-background;
+    text-color:       @foreground;
+}
+#element.alternate.active {
+    background-color: @active-background;
+    text-color:       @foreground;
+}
+#scrollbar {
+    width:        2px ;
+    border:       0;
+    handle-width: 8px ;
+    padding:      0;
+}
+#sidebar {
+    border:       2px dash 0px 0px ;
+    border-color: @separatorcolor;
+}
+#button.selected {
+    background-color: @selected-background;
+    text-color:       @foreground;
+}
+#inputbar {
+    spacing:    0;
+    text-color: @foreground;
+    padding:    1px ;
+}
+#case-indicator {
+    spacing:    0;
+    text-color: @foreground;
+}
+#entry {
+    spacing:    0;
+    text-color: @foreground;
+}
+#prompt {
+    spacing:    0;
+    text-color: @foreground;
+}
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+#textbox-prompt-colon {
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: @foreground;
+}

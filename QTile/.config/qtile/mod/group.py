@@ -6,15 +6,54 @@ from .defaults import MOV_KEY, SWITCH_KEY
 
 def export_groups():
     groups = [
-        Group("1", label="一", matches=[Match(wm_class="brave-browser")], layout="max"),
-        Group("2", label="二", layout="monadtall"),
-        Group("3", label="三", layout="monadtall"),
-        Group("4", label="四", layout="monadtall"),
-        Group("5", label="五", layout="monadtall"),
-        Group("6", label="六", layout="monadtall"),
-        Group("7", label="七", layout="monadtall"),
-        Group("8", label="八", layout="max", matches=[Match(wm_class="obsidian")]),
-        Group("9", label="九", layout="max"),
+        Group(
+            "1",
+            label="",
+            layout="max",
+            matches=[Match(wm_class="brave-browser")],
+        ),
+        Group(
+            "2",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "3",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "4",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "5",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "6",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "7",
+            label="",
+            layout="monadtall",
+        ),
+        Group(
+            "8",
+            label="",
+            layout="max",
+            matches=[Match(wm_class="firefox")],
+        ),
+        Group(
+            "9",
+            label="",
+            layout="max",
+            matches=[Match(wm_class="obsidian")],
+        ),
     ]
 
     keys = []

@@ -12,8 +12,8 @@ class Scratch:
                 DropDown(
                     "term",
                     "kitty",
-                    width=0.4,
-                    x=0.3,
+                    width=0.8,
+                    x=0.1,
                     y=0.0,
                 ),
                 DropDown(
@@ -23,6 +23,14 @@ class Scratch:
                     height=0.5,
                     x=0.25,
                     y=0.25,
+                ),
+                DropDown(
+                    "audio",
+                    "pavucontrol",
+                    width=0.7,
+                    height=0.7,
+                    x=0.15,
+                    y=0.15,
                 ),
             ],
         )
@@ -37,6 +45,11 @@ class Scratch:
                 SCRATCH_KEY,
                 "2",
                 lazy.group["scratchpad"].dropdown_toggle("bitwarden"),
+            ),
+            Key(
+                SCRATCH_KEY,
+                "3",
+                lazy.group["scratchpad"].dropdown_toggle("audio"),
             ),
         ]
 

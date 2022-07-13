@@ -58,8 +58,7 @@ wl_input_rules = None
 wmname = "LG3D"
 
 
-# Startup Function
 @hook.subscribe.startup_once
-def start_once():
+def startup():
     home = os.path.expanduser("~/.config/qtile/autostart.sh")
-    subprocess.call([home])
+    subprocess.Popen([home])

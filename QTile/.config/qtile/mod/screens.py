@@ -5,28 +5,51 @@ from libqtile.widget import (
     GroupBox,
     WindowName,
     CurrentLayout,
-    CurrentLayoutIcon,
+    Image,
     Systray,
     Battery,
     Clock,
+    Volume,
 )
 from libqtile.widget.net import Net
 from libqtile.widget.spacer import Spacer
+from libqtile.widget.textbox import TextBox
 from libqtile.widget.cpu import CPU
+from libqtile.widget.memory import Memory
 from .colors import Colors
+import os
 
 
-class TopBar:
+class LapTopBar:
     def __init__(self) -> None:
         rp = Colors().rose_pine
+        self.config_home = os.path.expanduser("~/.config")
         self.bar = Bar(
             [
+                Spacer(length=5, background=rp["Iris"]),
+                Image(
+                    filename=f"{self.config_home}/qtile/icon/artixlinux-logo-flat.png",
+                    background=rp["Iris"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn(
+                            "sh /home/fs144/.config/rofi/launchers/ribbon/launcher.sh"
+                        ),
+                    },
+                ),
+                Spacer(length=5, background=rp["Iris"]),
+                Spacer(length=5),
                 GroupBox(
-                    active=rp["Foam"],
-                    inactive=rp["Iris"],
-                    highlight_method="line",
-                    block_highlight_text_color=rp["Foam"],
-                    highlight_color=rp["Highlight Med"],
+                    active=rp["Text"],
+                    foreground=rp["Gold"],
+                    inactive=rp["Highlight High"],
+                    highlight_method="text",
+                    block_highlight_text_color=rp["Text"],
+                    highlight_color=rp["Gold"],
+                    urgent_alert_method="line",
+                    urgent_text=rp["Love"],
+                    urgent_border=rp["Love"],
+                    spacing=5,
+                    this_current_screen_border=rp["Gold"],
                 ),
                 Spacer(length=10),
                 WindowName(
@@ -37,38 +60,160 @@ class TopBar:
                 Systray(
                     padding=15,
                 ),
-                Spacer(length=10),
-                CurrentLayoutIcon(
-                    scale=0.7,
-                    foreground=rp["Iris"],
+                Spacer(
+                    length=15,
                 ),
                 CurrentLayout(
                     foreground=rp["Iris"],
                     mouse_callback=lazy.next_layout(),
                 ),
-                Spacer(length=10),
+                Spacer(
+                    length=15,
+                ),
                 Net(
-                    format="{down} ↓↑{up}",
+                    format="龍{down} ↓↑{up}",
+                    foreground=rp["Rose"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                Clock(
+                    format=" %d/%m/%y %H:%M",
+                    foreground=rp["Pine"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                TextBox(
+                    text=" ",
+                    foreground=rp["Foam"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn("pavucontrol"),
+                    },
+                ),
+                Volume(
+                    foreground=rp["Foam"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                Battery(
+                    format="{char} {percent:2.0%}",
+                    foreground=rp["Gold"],
+                    low_foreground=rp["Love"],
+                    charge_char=" ",
+                    full_char=" ",
+                    discharge_char=" ",
+                    notify_below=20,
+                    background=rp["Surface"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                TextBox(
+                    text=" ",
+                    foreground=rp["Love"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn(
+                            f"sh {self.config_home}/rofi/powermenu/power.sh"
+                        ),
+                    },
+                ),
+            ],
+            background=rp["Base"],
+            size=30,
+        )
+
+
+class MonitorBar:
+    def __init__(self) -> None:
+        rp = Colors().rose_pine
+        self.config_home = os.path.expanduser("~/.config")
+        self.bar = Bar(
+            [
+                Spacer(length=5, background=rp["Iris"]),
+                Image(
+                    filename=f"{self.config_home}/qtile/icon/artixlinux-logo-flat.png",
+                    background=rp["Iris"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn(
+                            "sh /home/fs144/.config/rofi/launchers/ribbon/launcher.sh"
+                        ),
+                    },
+                ),
+                Spacer(length=5, background=rp["Iris"]),
+                Spacer(length=5),
+                GroupBox(
+                    active=rp["Text"],
+                    foreground=rp["Gold"],
+                    inactive=rp["Highlight High"],
+                    highlight_method="text",
+                    block_highlight_text_color=rp["Text"],
+                    highlight_color=rp["Gold"],
+                    urgent_alert_method="line",
+                    urgent_text=rp["Love"],
+                    urgent_border=rp["Love"],
+                    spacing=5,
+                    this_current_screen_border=rp["Gold"],
+                ),
+                Spacer(length=10),
+                WindowName(
+                    format="{name}",
                     foreground=rp["Rose"],
                 ),
                 Spacer(length=10),
-                Clock(
-                    format="%Y-%m-%d %a %I:%M %p",
+                Systray(
+                    padding=15,
+                ),
+                Spacer(
+                    length=15,
+                ),
+                CurrentLayout(
+                    foreground=rp["Iris"],
+                    mouse_callback=lazy.next_layout(),
+                ),
+                Spacer(
+                    length=15,
+                ),
+                Net(
+                    format="龍{down} ↓↑{up}",
+                    foreground=rp["Rose"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                Memory(
+                    format=" {MemUsed:.0f}/{MemTotal:.0f} M",
+                    foreground=rp["Pine"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                TextBox(
+                    text="ﴮ ",
                     foreground=rp["Foam"],
                 ),
-                Spacer(length=10),
                 CPU(
-                    format="CPU {load_percent}%",
+                    format="{freq_current}GHz | {load_percent}%",
+                    foreground=rp["Foam"],
+                ),
+                Spacer(
+                    length=15,
+                ),
+                Spacer(
+                    length=15,
+                ),
+                TextBox(
+                    text=" ",
                     foreground=rp["Love"],
+                    mouse_callbacks={
+                        "Button1": lazy.spawn(
+                            f"sh {self.config_home}/rofi/powermenu/power.sh"
+                        ),
+                    },
                 ),
-                Spacer(length=10),
-                Battery(
-                    format="BAT  {char} {percent:2.0%}",
-                    foreground=rp["Gold"],
-                ),
-                Spacer(length=10),
             ],
-            background=rp["Overlay"],
+            background=rp["Base"],
             size=30,
         )
 
@@ -77,7 +222,10 @@ class Screens:
     def return_screens(self):
         screens = [
             Screen(
-                top=TopBar().bar,
+                top=LapTopBar().bar,
+            ),
+            Screen(
+                top=MonitorBar().bar,
             ),
         ]
 

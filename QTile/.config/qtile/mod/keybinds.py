@@ -3,6 +3,7 @@ from libqtile.lazy import lazy
 
 from .defaults import (
     MOV_KEY,
+    SS_KEY,
     SWITCH_KEY,
     KILL_KEY,
     SIZE_KEY,
@@ -111,6 +112,12 @@ class KeyBinds:
                 lazy.window.toggle_floating(),
                 desc="Toggle Floating window",
             ),
+            Key(
+                SS_KEY,
+                "s",
+                lazy.spawn("flameshot gui"),
+                desc="Take a Screenshot",
+            ),
         ]
 
         self.keys.extend(app_keys)
@@ -136,7 +143,18 @@ class KeyBinds:
                 lazy.reload_config(),
                 desc="Reload the config",
             ),
-            Key(POWER_KEY, "q", lazy.shutdown(), desc="Shutdown Qtile"),
+            Key(
+                POWER_KEY,
+                "q",
+                lazy.shutdown(),
+                desc="Shutdown Qtile",
+            ),
+            Key(
+                POWER_KEY,
+                "c",
+                lazy.spawn("sh /home/fs144/.config/rofi/powermenu/powermenu.sh"),
+                desc="Shutdown Prompt",
+            ),
         ]
         self.keys.extend(pow_keys)
 
@@ -151,7 +169,7 @@ class KeyBinds:
             Key(
                 APP_KEY,
                 "r",
-                lazy.spawn("rofi -show drun"),
+                lazy.spawn("sh /home/fs144/.config/rofi/launchers/ribbon/launcher.sh"),
                 desc="Spawn Application Launcher",
             ),
             Key(
