@@ -1,4 +1,4 @@
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
+from libqtile.config import Click, Drag, Key
 from libqtile.lazy import lazy
 
 from .defaults import (
@@ -13,6 +13,8 @@ from .defaults import (
 )
 
 from .defaults import TERM, FILES, BROWSER
+import os
+import subprocess
 
 
 class KeyBinds:
@@ -52,6 +54,12 @@ class KeyBinds:
                 "k",
                 lazy.layout.shuffle_up(),
                 desc="Move window up",
+            ),
+            Key(
+                MOV_KEY,
+                "m",
+                lazy.next_screen(),
+                desc="Change Monitor Focus",
             ),
         ]
         self.keys.extend(movment_keys)
@@ -136,6 +144,7 @@ class KeyBinds:
         self.keys.extend(lay_keys)
 
     def power_keys(self):
+        home = os.path.expanduser("~")
         pow_keys = [
             Key(
                 POWER_KEY,
@@ -152,8 +161,24 @@ class KeyBinds:
             Key(
                 POWER_KEY,
                 "c",
-                lazy.spawn("sh /home/fs144/.config/rofi/powermenu/powermenu.sh"),
+                lazy.spawn(f"sh {home}/.config/rofi/powermenu/powermenu.sh"),
                 desc="Shutdown Prompt",
+            ),
+            Key(
+                POWER_KEY,
+                "p",
+                lazy.spawn(f"{home}/.scripts/qtilescripts/power.py"),
+                desc="Power Prompt",
+            ),
+            Key(
+                [],
+                "XF86MonBrightnessUp",
+                lazy.spawn("brightnessctl set +5%"),
+            ),
+            Key(
+                [],
+                "XF86MonBrightnessDown",
+                lazy.spawn("brightnessctl set 5%-"),
             ),
         ]
         self.keys.extend(pow_keys)
@@ -169,7 +194,7 @@ class KeyBinds:
             Key(
                 APP_KEY,
                 "r",
-                lazy.spawn("sh /home/fs144/.config/rofi/launchers/ribbon/launcher.sh"),
+                lazy.spawn("rofi -show drun"),
                 desc="Spawn Application Launcher",
             ),
             Key(

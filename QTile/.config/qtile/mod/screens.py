@@ -10,6 +10,7 @@ from libqtile.widget import (
     Battery,
     Clock,
     Volume,
+    TaskList,
 )
 from libqtile.widget.net import Net
 from libqtile.widget.spacer import Spacer
@@ -62,17 +63,6 @@ class LapTopBar:
                 ),
                 Spacer(
                     length=15,
-                ),
-                CurrentLayout(
-                    foreground=rp["Iris"],
-                    mouse_callback=lazy.next_layout(),
-                ),
-                Spacer(
-                    length=15,
-                ),
-                Net(
-                    format="龍{down} ↓↑{up}",
-                    foreground=rp["Rose"],
                 ),
                 Spacer(
                     length=15,
@@ -131,17 +121,6 @@ class MonitorBar:
         self.config_home = os.path.expanduser("~/.config")
         self.bar = Bar(
             [
-                Spacer(length=5, background=rp["Iris"]),
-                Image(
-                    filename=f"{self.config_home}/qtile/icon/artixlinux-logo-flat.png",
-                    background=rp["Iris"],
-                    mouse_callbacks={
-                        "Button1": lazy.spawn(
-                            "sh /home/fs144/.config/rofi/launchers/ribbon/launcher.sh"
-                        ),
-                    },
-                ),
-                Spacer(length=5, background=rp["Iris"]),
                 Spacer(length=5),
                 GroupBox(
                     active=rp["Text"],
@@ -157,17 +136,14 @@ class MonitorBar:
                     this_current_screen_border=rp["Gold"],
                 ),
                 Spacer(length=10),
-                WindowName(
-                    format="{name}",
+                TaskList(
                     foreground=rp["Rose"],
                 ),
+                # WindowName(
+                #     format="{name}",
+                #     foreground=rp["Rose"],
+                # ),
                 Spacer(length=10),
-                Systray(
-                    padding=15,
-                ),
-                Spacer(
-                    length=15,
-                ),
                 CurrentLayout(
                     foreground=rp["Iris"],
                     mouse_callback=lazy.next_layout(),
@@ -176,14 +152,14 @@ class MonitorBar:
                     length=15,
                 ),
                 Net(
-                    format="龍{down} ↓↑{up}",
+                    format="龍 {down} ↓↑{up}",
                     foreground=rp["Rose"],
                 ),
                 Spacer(
                     length=15,
                 ),
                 Memory(
-                    format=" {MemUsed:.0f}/{MemTotal:.0f} M",
+                    format="  {MemUsed:.0f}/{MemTotal:.0f} M",
                     foreground=rp["Pine"],
                 ),
                 Spacer(

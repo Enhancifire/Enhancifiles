@@ -38,10 +38,10 @@ set -x PATH "/home/fs144/Development/flutter/bin" $PATH
 set -x PATH "/home/fs144/.pub-cache/bin" $PATH
 
 # Make npm run without root
-set -x NPM_CONFIG_PREFIX "~/.npm-global"
-set -x PATH "~/.npm-global/bin" $PATH
+set -x NPM_CONFIG_PREFIX "/home/fs144/.npm-global"
 set -x PATH "/home/fs144/.npm-global/bin" $PATH
-set -x PATH "~/.emacs.d/bin" $PATH
+set -x PATH "/home/fs144/.npm-global/bin" $PATH
+set -x PATH "/home/fs144/.emacs.d/bin" $PATH
 
 set -x PATH "/home/fs144/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin" $PATH
 set -x EDITOR "/usr/bin/nvim"

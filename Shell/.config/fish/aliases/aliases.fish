@@ -33,4 +33,5 @@ alias gitpkg='pacman -Q | grep -i "\-git" | wc -l'			# List amount of -git packa
 
 alias dc="docker-compose"
 
-
+alias r="ranger"
+alias zh="zathura"

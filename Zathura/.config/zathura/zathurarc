@@ -1,0 +1,38 @@
+# Zathura Configuration based on the Rose-Pine theme
+
+# Enable System Clipboard
+set selection-clipboard clipboard
+
+set adjust-open "best-fit"
+
+# set smooth-scroll "true"
+set scroll-page-aware "true"
+
+# Rose Pine Theme
+
+set default-fg "#e0def4"
+set default-bg "#191724"
+
+set statusbar-fg ""
+set statusbar-bg ""
+
+set inputbar-fg "#eb6f92"
+set inputbar-bg "#1f1d2e"
+
+set highlight-color "#c4a7e7"
+set highlight-active-color "#f6c177"
+
+set completion-highlight-fg "#f6c177"
+set completion-highlight-bg "#191724"
+
+set recolor "true"
+
+set recolor-lightcolor "#191724"
+set recolor-darkcolor "#e0def4"
+# set recolor-keephue "true"
+set recolor-reverse-video "true"
+
+map a set recolor
+unmap f
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen

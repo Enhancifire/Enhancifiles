@@ -1,19 +1,10 @@
-# QTile Imports
-from libqtile import bar, layout, widget, hook
-from libqtile.config import Click, Drag, Group, Key, Match, Screen
-from libqtile.lazy import lazy
-
-# Custom Module Imports
+# Library Imports
 from mod.keybinds import KeyBinds, MouseBinds
 import mod.layouts as lay
 import mod.group as grp
 from mod.screens import Screens
 from mod.scratch import Scratch
-
-# Library Imports
-import os
-import subprocess
-
+import mod.hooks
 
 # Groups and Group Keybindings
 groups, group_keys = grp.export_groups()
@@ -56,9 +47,3 @@ reconfigure_screens = True
 auto_minimize = True
 wl_input_rules = None
 wmname = "LG3D"
-
-
-@hook.subscribe.startup_once
-def startup():
-    home = os.path.expanduser("~/.config/qtile/autostart.sh")
-    subprocess.Popen([home])

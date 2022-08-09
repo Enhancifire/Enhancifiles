@@ -1,6 +1,8 @@
 #!/usr/bin/fish
-sh /home/fs144/.screenlayout/lappy.sh
+autorandr --change &
+dunst &
 nitrogen --restore &
 picom &
 nm-applet &
 xclip &
+kdeconnect-indicator &
