@@ -10,7 +10,7 @@ def export_groups():
             "1",
             label="",
             layout="max",
-            matches=[Match(wm_class="brave-browser")],
+            matches=[Match(wm_class="firefox")],
         ),
         Group(
             "2",
@@ -42,13 +42,11 @@ def export_groups():
             "7",
             label="",
             layout="monadtall",
-            matches=[Match(wm_class="crx_cinhimbnkkaeohfgghhklpknlkffjgod")],
         ),
         Group(
             "8",
             label="",
             layout="max",
-            matches=[Match(wm_class="firefox")],
         ),
         Group(
             "9",
