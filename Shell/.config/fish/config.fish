@@ -15,6 +15,8 @@ if test -d ~/.config/fish/aliases
   source ~/.config/fish/aliases/projects.fish
 end
 
+set -x FZF_DEFAULT_COMMAND "rg --files --hidden"
+
 # Setting up functions
 if test -d ~/.config/fish/functions
   source ~/.config/fish/functions/testproject.fish
