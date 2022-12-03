@@ -15,6 +15,11 @@ if test -d ~/.config/fish/aliases
   source ~/.config/fish/aliases/projects.fish
 end
 
+
+if test -d ~/.config/fish/rose-pine.fish
+  source ~/.config/fish/rose-pine.fish
+end
+
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden"
 
 # Setting up functions
@@ -36,7 +41,7 @@ if test -d ~/.cargo/bin
     end
 end
 
-set -x PATH "/home/fs144/Development/flutter/bin" $PATH
+set -x PATH "/home/fs144/Development/flutter_linux/bin" $PATH
 set -x PATH "/home/fs144/.pub-cache/bin" $PATH
 
 # Make npm run without root
@@ -45,8 +50,9 @@ set -x PATH "/home/fs144/.npm-global/bin" $PATH
 set -x PATH "/home/fs144/.npm-global/bin" $PATH
 set -x PATH "/home/fs144/.emacs.d/bin" $PATH
 
-set -x PATH "/home/fs144/.local/share/nvim/lsp_servers/sumneko_lua/extension/server/bin" $PATH
+set -x PATH "/home/fs144/.local/share/nvim/mason/" $PATH
 set -x EDITOR "/usr/bin/nvim"
+set -x CHROME_EXECUTABLE '/usr/bin/brave'
 
 ##eval "tmux attach -t base || tmux new -s base"
 
