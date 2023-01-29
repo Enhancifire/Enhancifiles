@@ -20,6 +20,10 @@ if test -d ~/.config/fish/rose-pine.fish
   source ~/.config/fish/rose-pine.fish
 end
 
+if test -d /home/fs144/Android/Sdk/platform-tools
+  set -p PATH ~/Android/Sdk/platform-tools
+end
+
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden"
 
 # Setting up functions
