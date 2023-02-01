@@ -138,7 +138,8 @@ class KeyBinds:
                 lazy.layout.toggle_split(),
                 desc="Toggle between split and unsplit sides of stack",
             ),
-            Key(MOV_KEY, "Tab", lazy.next_layout(), desc="Toggle between layouts"),
+            Key(MOV_KEY, "Tab", lazy.next_layout(),
+                desc="Toggle between layouts"),
         ]
 
         self.keys.extend(lay_keys)
@@ -169,6 +170,12 @@ class KeyBinds:
                 "p",
                 lazy.spawn(f"{home}/.scripts/qtilescripts/power.py"),
                 desc="Power Prompt",
+            ),
+            Key(
+                POWER_KEY,
+                'l',
+                lazy.spawn(f"python {home}/.config/qtile/mod/scripts/lock.py"),
+                desc="Lock with Random Wallpaper",
             ),
             Key(
                 [],

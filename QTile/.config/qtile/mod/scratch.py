@@ -18,7 +18,7 @@ class Scratch:
                 ),
                 DropDown(
                     "bitwarden",
-                    "bitwarden-desktop",
+                    "Bitwarden",
                     width=0.5,
                     height=0.5,
                     x=0.25,
@@ -31,6 +31,14 @@ class Scratch:
                     height=0.7,
                     x=0.15,
                     y=0.15,
+                ),
+                DropDown(
+                    "ranger",
+                    "kitty ranger",
+                    width=0.8,
+                    height=0.5,
+                    x=0.1,
+                    y=0.2,
                 ),
             ],
         )
@@ -50,6 +58,11 @@ class Scratch:
                 SCRATCH_KEY,
                 "3",
                 lazy.group["scratchpad"].dropdown_toggle("audio"),
+            ),
+            Key(
+                SCRATCH_KEY,
+                "f",
+                lazy.group["scratchpad"].dropdown_toggle("ranger"),
             ),
         ]
 

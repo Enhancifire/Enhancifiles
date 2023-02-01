@@ -9,13 +9,13 @@ def export_groups():
         Group(
             "1",
             label="",
-            layout="max",
-            matches=[Match(wm_class="firefox")],
+            layout="monadtall",
         ),
         Group(
             "2",
             label="",
             layout="monadtall",
+            matches=[Match(wm_class="firefox")],
         ),
         Group(
             "3",

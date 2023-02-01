@@ -1,9 +1,20 @@
 # Font
 font_family FantasqueSansMono
-font_size 12
+font_size 18
 
-background_opacity 0.75
+background_opacity 1.0
 confirm_os_window_close 0
 tab_bar_style powerline
 url_style curly
 cursor_shape block
+#background               #191724
+background               #212227
+
+
+# BEGIN_KITTY_THEME
+# Rosé Pine
+# include current-theme.conf
+# END_KITTY_THEME
+
+include ./tomorrow_night.conf
+# include ./spiderman.conf

@@ -17,4 +17,4 @@ SS_KEY = [MOD, SHIFT]
 
 TERM = "kitty"
 FILES = "thunar"
-BROWSER = "brave"
+BROWSER = "firefox"
