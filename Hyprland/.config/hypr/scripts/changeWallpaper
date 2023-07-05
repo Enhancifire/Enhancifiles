@@ -1,0 +1,14 @@
+#!/bin/bash
+
+DIR=$HOME/Wallpapers
+PICS=($(ls ${DIR}))
+
+RANDOMPICS=${PICS[$RANDOM % ${#PICS[@]} ]}
+
+echo $DIR/$RANDOMPICS
+
+swww query || swww init
+
+# --transition-step 90 --transition-fps 90 --transition-angle 30
+
+swww img --transition-type center $DIR/$RANDOMPICS

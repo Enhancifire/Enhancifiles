@@ -1,0 +1,15 @@
+{
+  "pyprland": {
+    "plugins": [
+      "scratchpads"
+    ]
+  },
+  "scratchpads": {
+    "term": {
+      "command": "kitty --class dropterm --title drop",
+      "animation": "fromTop",
+      "margin": 50,
+      "unfocus": "hide"
+    }
+  }
+}

@@ -1,4 +1,8 @@
-set fish_greeting
+# set fish_greeting
+function fish_greeting
+     pokemon-colorscripts -r --no-title
+end
+
 
 ## Starship prompt
 if status --is-interactive
@@ -8,6 +12,7 @@ end
 # Setting up aliases
 if test -d ~/.config/fish/aliases
   source ~/.config/fish/aliases/aliases.fish
+  source ~/.config/fish/aliases/nvim.fish
   source ~/.config/fish/aliases/arch_packages.fish
   source ~/.config/fish/aliases/django_aliases.fish
   source ~/.config/fish/aliases/fedora.fish
@@ -50,6 +55,7 @@ set -x PATH "/home/fs144/.pub-cache/bin" $PATH
 
 # Make npm run without root
 set -x NPM_CONFIG_PREFIX "/home/fs144/.npm-global"
+set -x HYPRSHOT_DIR "/home/fs144/Pictures/Screenshots"
 set -x PATH "/home/fs144/.npm-global/bin" $PATH
 set -x PATH "/home/fs144/.npm-global/bin" $PATH
 set -x PATH "/home/fs144/.emacs.d/bin" $PATH

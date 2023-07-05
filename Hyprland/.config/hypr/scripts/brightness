@@ -1,0 +1,53 @@
+#!/usr/bin/python3
+import sys
+import subprocess
+
+
+def main():
+    args = sys.argv
+
+    p = subprocess.Popen(['brightnessctl', 'g'], stdout=subprocess.PIPE)
+
+    out = p.communicate()[0].decode('utf-8').split('\n')[0]
+
+    if args[1] == 'lower':
+        lower_brightness(out, args[2])
+
+    elif args[1] == 'raise':
+        raise_brightness(out, args[2])
+
+
+def lower_brightness(current, new):
+    current, new = int(current), int(new)
+    if current - new < 0:
+        value = 0
+    else:
+        value = current - new
+
+    p = subprocess.Popen(
+        ['brightnessctl', 's', str(value)],
+        stdout=subprocess.PIPE,
+    )
+    _ = p.communicate()[0].decode('utf-8').split('\n')
+
+    # print(out)
+
+
+def raise_brightness(current, new):
+    current, new = int(current), int(new)
+    if current + new > 255:
+        value = 255
+    else:
+        value = current + new
+
+    p = subprocess.Popen(
+        ['brightnessctl', 's', str(value)],
+        stdout=subprocess.PIPE,
+    )
+    _ = p.communicate()[0].decode('utf-8').split('\n')
+
+    # print(out)
+
+
+if __name__ == '__main__':
+    main()
