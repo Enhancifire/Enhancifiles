@@ -1,20 +1,23 @@
+linux_display_server wayland
+# wayland_titlebar_color background
+
 # Font
 font_family FantasqueSansMono
 font_size 18
 
-background_opacity 1.0
+background_opacity 0.7
 confirm_os_window_close 0
 tab_bar_style powerline
 url_style curly
 cursor_shape block
 #background               #191724
-background               #212227
+# background               #212227
 
 
 # BEGIN_KITTY_THEME
-# Rosé Pine
-# include current-theme.conf
+# Catppuccin-Mocha
+include current-theme.conf
 # END_KITTY_THEME
 
-include ./tomorrow_night.conf
+# include ./tomorrow_night.conf
 # include ./spiderman.conf

@@ -35,3 +35,6 @@ alias dc="docker-compose"
 
 alias r="ranger"
 alias zh="zathura"
+alias zr="zellij-runner"
+alias ze="zellij"
+alias za="zellij attach --create"

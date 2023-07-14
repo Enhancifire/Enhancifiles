@@ -1,12 +1,11 @@
-# set fish_greeting
-function fish_greeting
-     pokemon-colorscripts -r --no-title
-end
+set fish_greeting
+# function fish_greeting
+#      pokemon-colorscripts -r --no-title
+# end
 
 
-## Starship prompt
 if status --is-interactive
-   source ("/usr/bin/starship" init fish --print-full-init | psub)
+   source (/usr/bin/starship init fish --print-full-init | psub)
 end
 
 # Setting up aliases

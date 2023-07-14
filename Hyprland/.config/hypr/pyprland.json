@@ -10,6 +10,11 @@
       "animation": "fromTop",
       "margin": 50,
       "unfocus": "hide"
+    },
+    "files": {
+      "command": "kitty --class ranger ranger",
+      "animation": "fromTop",
+      "unfocus": "hide"
     }
   }
 }

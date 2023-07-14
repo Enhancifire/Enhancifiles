@@ -6,9 +6,9 @@
     "margin-bottom": 4,
     "margin-right": 10,
     "spacing": 5, // Gaps between modules (4px)
-    "modules-left": ["custom/launcher", "cpu", "memory", "wlr/workspaces", "wlr/window", "custom/weather"],
-    "modules-center": ["mpris", "custom/wallpaper"],
-    "modules-right": ["tray", "custom/spotify", "backlight", "pulseaudio", "network", "battery", "clock", "custom/power-menu"],
+    "modules-left": ["wlr/workspaces", "wlr/window", "custom/weather"],
+    "modules-center": ["mpris"],
+    "modules-right": ["tray", "backlight", "pulseaudio", "battery", "clock", "custom/power-menu"],
     "wlr/workspaces": {
       "format": "{icon}",
       "on-click": "activate",
@@ -46,11 +46,10 @@
         "spacing": 10
     },
     "clock": {
-        "format": "<span color='#bf616a'> </span>{:%a %b %d}",
-        "format-alt": "<span color='#bf616a'> </span>{:%I:%M %p}",
+        "format": "<span color='#bf616a'> </span>{:%I:%M %p}",
+        // "format": "<span color='#bf616a'> </span>{:%I:%M %p} {:%a %b %d}",
         "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
     },
-
     "cpu": {
       "interval": 10,
       "format": " {}%",
@@ -132,7 +131,7 @@
     "on-scroll-down": "playerctl previous",
     },
     "mpris": {
-      "format": "{title} - {player_icon}",
+      "format": "{title}",
       "player-icons": {
 	  "default": "▶",
 	  "mpv": "🎵",
