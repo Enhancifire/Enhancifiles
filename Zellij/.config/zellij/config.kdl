@@ -84,7 +84,7 @@ keybinds {
         bind "d" { HalfPageScrollDown; }
         bind "u" { HalfPageScrollUp; }
         // uncomment this and adjust key if using copy_on_select=false
-        // bind "Alt c" { Copy; }
+        bind "Alt c" { Copy; }
     }
     search {
         bind "Ctrl s" { SwitchToMode "Normal"; }
@@ -243,7 +243,7 @@ default_layout "compact"
 
 copy_on_select false
 
-// scrollback_editor "/usr/bin/vim"
+scrollback_editor "/home/fs144/.nix-profile/bin/nvim"
 
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)

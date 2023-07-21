@@ -4,3 +4,6 @@
 [submodule "Startpage"]
 	path = Startpage
 	url = https://github.com/Enhancifire/Start-Page.git
+[submodule "Tmux/.tmux/plugins/tpm"]
+	path = Tmux/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
