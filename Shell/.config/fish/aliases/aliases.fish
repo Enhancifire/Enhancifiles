@@ -38,3 +38,5 @@ alias zh="zathura"
 alias zr="zellij-runner"
 alias ze="zellij"
 alias za="zellij attach --create"
+
+alias tmux="tmux -u"

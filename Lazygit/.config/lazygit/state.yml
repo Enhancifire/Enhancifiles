@@ -1,0 +1,23 @@
+lastupdatecheck: 0
+recentrepos:
+- /home/fs144/.dotfiles
+- /home/fs144/.dotfiles/Neovim/.config/nvim
+- /home/fs144/.local/share/nvim/lazy/neogit
+- /home/fs144/Drives/Data/Projects/Rehnuma/Backend
+- /home/fs144/Drives/Data/Projects/Rehnuma/Frontend
+- /home/fs144/Projects/100 Days of Flutter/RehnumaMedical/
+- /home/fs144/Projects/spacers
+- /home/fs144/Work/Atomic Loops/Nomo Mobile App/
+- /home/fs144/Work/Atomic Loops/Nomo Mobile App
+- /home/fs144/Work/Atomic Loops/AshramAI/
+- /home/fs144/Work/Atomic Loops/AshramAI
+- /home/fs144/Work/Atomic Loops/YogaAIAdmin/
+- /home/fs144/Drives/Data/Work/Atomic Loops/AshramAI
+- /home/fs144/Projects/100 Days of Flutter/RehnumaMedical
+- /home/fs144/.config/nvim
+- /home/fs144/Work/Paisa
+startuppopupversion: 5
+customcommandshistory:
+- q
+hidecommandlog: true
+ignorewhitespaceindiffview: false
