@@ -1,3 +1,4 @@
 QTile/.config/qtile/__pycache__/
 QTile/.config/qtile/mod/__pycache__/
 Tmux/.tmux/resurrect/
+Tmux/.config/tmux/plugins/
