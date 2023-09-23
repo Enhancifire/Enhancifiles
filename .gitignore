@@ -1,4 +1,6 @@
 QTile/.config/qtile/__pycache__/
 QTile/.config/qtile/mod/__pycache__/
 Tmux/.tmux/resurrect/
+Tmux/.tmux/resurrect/last
 Tmux/.config/tmux/plugins/
+Lazygit/.config/lazygit/state.yml

@@ -1,0 +1,14 @@
+{
+  output eDP-2 enable mode 2560x1600@60Hz position 0,0
+}
+
+{
+  output HDMI-A-1 enable mode 2560x1440@60 position 0,0
+  output eDP-2 enable mode 2560x1600@60Hz position 2560,0
+}
+
+{
+  output HDMI-A-1 enable mode 1920x1080@60 position 0,0
+  output eDP-2 enable mode 2560x1600@60Hz position 1920,0
+}
+

@@ -1,0 +1,64 @@
+- name: Bootstrap the environment
+  hosts: localhost
+
+  tasks:
+  - name: Install packages with pacman
+    become: yes
+    # community.general.pacman:
+    kewlfft.aur.aur:
+      use: yay
+      name:
+        - fish
+        - tmux
+        - neovim
+        - hyprland-nvidia-git
+        - waybar-hyprland-git
+        - dunst
+        - ranger
+        - zathura
+        - fish
+        - kanshi
+        - exa
+        - git
+        - rofi
+        - cava
+        - kitty
+        - neofetch
+        - zellij
+        - ttf-nerd-font-symbols-mono
+        - android-studio
+        - appimagelauncher
+        - blueman
+        - network-manager-applet
+        - swww
+        - starship
+        - foot
+        - kdeconnect
+        - gnome-keyring
+        - gnome-disk-utility
+        - polkit-kde-agent
+        - pipewire
+        - wireplumber
+        - qt5-wayland
+        - qt6-wayland
+        - xdg-desktop-portal-hyprland-git
+      state: present
+    # when: ansible_distribution == "Arch"
+
+- name: Stow the dotfiles
+  hosts: localhost
+  become: yes
+
+  tasks:
+  - name: Unstow all files
+    shell: "stow -D Awesome BSPWM Cava Dunst Hyprland Kanshi Kitty Lazygit Neovim Openbox Picom QTile Ranger Rofi Scripts Shell Tmux Variety Wakatime Zathura Zellij ZSH"
+
+  - name: Decrypt Wakatime
+    ansible.builtin.command: ansible-vault decrypt Wakatime/.wakatime.cfg
+
+  - name: Stow dotfiles
+    shell: "stow Shell Tmux Scripts Kitty Neovim Rofi Cava Dunst Ranger ZSH Wakatime"
+
+  # - name: Change shell
+  #   shell: "chsh -S $(which fish)"
+

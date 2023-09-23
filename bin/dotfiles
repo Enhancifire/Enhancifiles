@@ -1,0 +1,28 @@
+#!/bin/bash
+
+DOTFILES_DIR="$HOME/.dotfiles"
+
+if ! [ -x "$(command -v yay)" ] ; then
+  sudo pacman -S yay --noconfirm
+fi
+
+if ! [ -x "$(command -v ansible)" ] ; then
+  sudo pacman -S ansible --noconfirm
+fi
+
+
+if ! [ -x "$(command -v stow)" ] ; then
+  sudo pacman -S stow --noconfirm
+fi
+
+if [[ -f "$DOTFILES_DIR/requirements.yml" ]] ; then
+  cd "$DOTFILES_DIR"
+
+  ansible-galaxy install -r requirements.yml
+fi
+
+if [[ -f "$DOTFILES_DIR/main.yml" ]] ; then
+  cd "$DOTFILES_DIR"
+
+  ansible-playbook --diff --ask-become-pass --ask-vault-pass "$DOTFILES_DIR/main.yml"
+fi
