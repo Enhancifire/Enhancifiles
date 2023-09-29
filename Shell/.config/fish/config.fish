@@ -9,23 +9,23 @@ if status --is-interactive
 end
 
 # Setting up aliases
-if test -d ~/.config/fish/aliases
-  source ~/.config/fish/aliases/aliases.fish
-  source ~/.config/fish/aliases/nvim.fish
-  source ~/.config/fish/aliases/arch_packages.fish
-  source ~/.config/fish/aliases/django_aliases.fish
-  source ~/.config/fish/aliases/fedora.fish
-  source ~/.config/fish/aliases/git.fish
-  source ~/.config/fish/aliases/projects.fish
+if test -d "$HOME/.config/fish/aliases"
+  source $HOME/.config/fish/aliases/aliases.fish
+  source $HOME/.config/fish/aliases/nvim.fish
+  source $HOME/.config/fish/aliases/arch_packages.fish
+  source $HOME/.config/fish/aliases/django_aliases.fish
+  source $HOME/.config/fish/aliases/fedora.fish
+  source $HOME/.config/fish/aliases/git.fish
+  source $HOME/.config/fish/aliases/projects.fish
 end
 
 
-if test -d ~/.config/fish/rose-pine.fish
-  source ~/.config/fish/rose-pine.fish
+if test -d $HOME/.config/fish/themes/rose-pine.fish
+  source $HOME/.config/fish/themes/rose-pine.fish
 end
 
-if test -d /home/fs144/Android/Sdk/platform-tools
-  set -p PATH ~/Android/Sdk/platform-tools
+if test -d "$HOME/Android/Sdk/platform-tools"
+  set -p PATH "$HOME/Android/Sdk/platform-tools"
 end
 
 set -x FZF_DEFAULT_COMMAND "rg --files --hidden"
@@ -36,30 +36,34 @@ if test -d ~/.config/fish/functions
 end
 
 # Add ~/.local/bin to PATH
-if test -d ~/.local/bin
-    if not contains -- ~/.local/bin $PATH
-        set -p PATH ~/.local/bin
+if test -d $HOME/.local/bin
+    if not contains -- $HOME/.local/bin $PATH
+        set -p PATH $HOME/.local/bin
     end
 end
 
 # Add ~/.cargo/bin to PATH
-if test -d ~/.cargo/bin
-    if not contains -- ~/.cargo/bin $PATH
-        set -p PATH ~/.cargo/bin
+if test -d $HOME/.cargo/bin
+    if not contains -- $HOME/.cargo/bin $PATH
+        set -p PATH $HOME/.cargo/bin
     end
 end
 
-set -x PATH "/home/fs144/Development/flutter_linux/bin" $PATH
-set -x PATH "/home/fs144/.pub-cache/bin" $PATH
+if test -d "$HOME/Development/flutter_linux/bin"
+  set -x PATH "$HOME/Development/flutter_linux/bin" $PATH
+end
+if test -d "$HOME/.pub-cache/bin"
+  set -x PATH "$HOME/.pub-cache/bin" $PATH
+end
 
 # Make npm run without root
-set -x NPM_CONFIG_PREFIX "/home/fs144/.npm-global"
-set -x HYPRSHOT_DIR "/home/fs144/Pictures/Screenshots"
-set -x PATH "/home/fs144/.npm-global/bin" $PATH
-set -x PATH "/home/fs144/.npm-global/bin" $PATH
-set -x PATH "/home/fs144/.emacs.d/bin" $PATH
+set -x NPM_CONFIG_PREFIX "$HOME/.npm-global"
+set -x HYPRSHOT_DIR "$HOME/Pictures/Screenshots"
+set -x PATH "$HOME/.npm-global/bin" $PATH
+set -x PATH "$HOME/.npm-global/bin" $PATH
+set -x PATH "$HOME/.emacs.d/bin" $PATH
 
-set -x PATH "/home/fs144/.local/share/nvim/mason/" $PATH
+set -x PATH "$HOME/.local/share/nvim/mason/" $PATH
 set -x EDITOR "/usr/bin/nvim"
 set -x CHROME_EXECUTABLE '/usr/bin/brave'
 
@@ -121,5 +125,3 @@ alias jctl="journalctl -p 3 -xb"
 
 # Recent installed packages
 alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-
-thefuck --alias | source
