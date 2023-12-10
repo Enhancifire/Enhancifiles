@@ -50,7 +50,7 @@
     "clock": {
         "format": "<span color='#bf616a'> </span>{:%I:%M %p}",
         // "format": "<span color='#bf616a'> </span>{:%I:%M %p} {:%a %b %d}",
-        "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>",
+        "on-click": "bash ~/.config/eww/scripts/launcher toggle_menu calendar",
     },
     "cpu": {
       "interval": 10,

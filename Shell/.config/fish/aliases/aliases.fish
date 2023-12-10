@@ -40,3 +40,9 @@ alias ze="zellij"
 alias za="zellij attach --create"
 
 alias tmux="tmux -u"
+
+# Ollama Aliases
+alias ol="ollama"
+alias mistral="ollama run mistral:instruct"
+alias ms="ollama run mistral:instruct"
+alias l2="ollama run llama2"

@@ -50,7 +50,7 @@ if test -d $HOME/.cargo/bin
 end
 
 if test -d "$HOME/Development/flutter_linux/bin"
-  set -x PATH "$HOME/Development/flutter_linux/bin" $PATH
+  set -x PATH "$HOME/Development/flutter/bin" $PATH
 end
 if test -d "$HOME/.pub-cache/bin"
   set -x PATH "$HOME/.pub-cache/bin" $PATH

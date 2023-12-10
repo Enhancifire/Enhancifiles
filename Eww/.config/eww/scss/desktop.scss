@@ -1,0 +1,18 @@
+.desktop{
+    // background-image: url($wallpaper);
+    background-size: cover;
+    .clock{
+        color: white;
+	.greeting {
+	  font-size: 5em;
+	}
+        text-shadow: 4px 4px 4px black;
+	padding: 0px;
+        .hour, .minutes, .separator{
+            font-size: 15em;
+            font-family: $mono_font;
+
+        }
+        .date{ font-size: 3em; }
+    }
+}
