@@ -11,7 +11,7 @@
         - fish
         - tmux
         - neovim
-        - hyprland-nvidia-git
+        - hyprland-git
         - waybar-hyprland-git
         - dunst
         - ranger

@@ -28,6 +28,7 @@ keybinds {
         bind "-" { Resize "Decrease"; }
     }
     pane {
+        unbind "Ctrl n"
         bind "Ctrl a" { SwitchToMode "Normal"; }
         bind "h" "Left" { MoveFocus "Left"; }
         bind "l" "Right" { MoveFocus "Right"; }
@@ -205,7 +206,7 @@ pane_frames false
 
 // auto_layout true
 
-default_layout "compact"
+// default_layout "compact"
 
 // Choose the mode that zellij uses when starting up.
 // Default: normal
@@ -254,7 +255,7 @@ scrollback_editor "/home/fs144/.nix-profile/bin/nvim"
 
 // layout_dir "/path/to/my/layout_dir"
 
-theme_dir "/home/fs144/.config/zellij/themes/"
+// theme_dir "/home/fs144/.config/zellij/themes/"
 
 ui {
   pane_frames {
