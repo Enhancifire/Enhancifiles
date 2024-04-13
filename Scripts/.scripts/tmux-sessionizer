@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(fd . ~/.config ~/AI ~/Work ~/Projects ~/Projects/100\ Days\ of\ Flutter/ ~/Projects/Rehnuma/ ~/Work/Atomic\ Loops/ ~/Work/Dyte/ ~/Projects/Completed/ ~/Projects/Completed/100\ Days\ of\ Code/ --type d --min-depth 1 --max-depth 1 | fzf)
+    selected=$(fd . ~/.config ~/AI ~/Work ~/Projects ~/Projects/100\ Days\ of\ Flutter/ ~/Projects/Rehnuma/ ~/Work/ai-unika/ ~/Work/Atomic\ Loops/ ~/Work/Dyte/ ~/Projects/Completed/ ~/Projects/Completed/100\ Days\ of\ Code/ --type d --min-depth 1 --max-depth 1 | fzf)
 fi
 
 if [[ -z $selected ]]; then

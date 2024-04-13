@@ -8,6 +8,8 @@ if status --is-interactive
    source (/usr/bin/starship init fish --print-full-init | psub)
 end
 
+set -x LANG en_IN.UTF-8
+
 # Setting up aliases
 if test -d "$HOME/.config/fish/aliases"
   source $HOME/.config/fish/aliases/aliases.fish
@@ -47,6 +49,12 @@ if test -d $HOME/.cargo/bin
     if not contains -- $HOME/.cargo/bin $PATH
         set -p PATH $HOME/.cargo/bin
     end
+end
+
+if test -d $HOME/.pyenv
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  pyenv init - | source
 end
 
 if test -d "$HOME/Development/flutter_linux/bin"
