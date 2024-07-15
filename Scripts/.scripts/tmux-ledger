@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+name=Ledger
+dir=~/Notes/Transactions/
+
+if ! tmux has-session -t="$name" 2> /dev/null; then
+    # tmux new-session -ds $selected_name -c $selected
+    tmux new-session -ds "$name" -c "$dir"
+fi
+
+tmux switch-client -t "$name"

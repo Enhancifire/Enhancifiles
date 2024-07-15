@@ -1,19 +1,19 @@
-{
-  output eDP-2 enable mode 2560x1600@60Hz position 0,0
+profile {
+  output eDP-1 enable mode 2560x1600@60Hz position 0,0
 }
 
-{
-  output DP-2 enable mode 2560x1440@60 position 0,0 adaptive_sync
-  output eDP-2 enable mode 2560x1600@60Hz position 2560,0 adaptive_sync
+profile {
+  output DP-2 enable mode 2560x1440@60 position 0,0
+  output eDP-2 enable mode 2560x1600@60Hz position 2560,0
 }
 
-{
+profile {
   output HDMI-A-1 enable mode 1920x1080@60 position 2560,0
-  output eDP-1 enable mode 2560x1600@60Hz position 0,0 adaptive_sync
+  output eDP-1 enable mode 2560x1600@60Hz position 0,0
 }
 
-{
-  output HDMI-A-1 enable mode 2560x1440@60 position 0,0 adaptive_sync
-  output eDP-2 enable mode 2560x1600@60Hz position 2560,0 adaptive_sync
+profile {
+  output HDMI-A-1 enable mode 2560x1440@60 position 0,0
+  output eDP-2 enable mode 2560x1600@60Hz position 2560,0
 }
 

@@ -46,3 +46,5 @@ alias ol="ollama"
 alias mistral="ollama run mistral:instruct"
 alias ms="ollama run mistral:instruct"
 alias l2="ollama run llama2"
+
+alias led="ledger -f ~/Notes/Transactions/journal.ledger"

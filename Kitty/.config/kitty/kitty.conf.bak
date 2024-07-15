@@ -1,13 +1,14 @@
-# linux_display_server wayland
-# wayland_titlebar_color background
+linux_display_server wayland
+wayland_titlebar_color background
 
 # Font
-# font_family FantasqueSansMono
-font_family FiraCodeMono
-font_size 16
+font_family FantasqueSansM Nerd Font
+# font_family FiraCode Nerd Font Mono
+# font_family MonoLisa Nerd Font Regular
+font_size 18
 
-background_opacity 0.8
-# background_opacity 1
+# background_opacity 0.7
+background_opacity 1
 confirm_os_window_close 0
 tab_bar_style powerline
 url_style curly
@@ -17,7 +18,7 @@ cursor_shape block
 
 
 # BEGIN_KITTY_THEME
-# Everforest Dark Hard
+# Catppuccin-Mocha
 include current-theme.conf
 # END_KITTY_THEME
 
