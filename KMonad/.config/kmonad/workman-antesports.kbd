@@ -1,0 +1,36 @@
+#|
+My Workman Layout for my Ant-Esports TKL keyboard
+|#
+
+
+(defcfg
+  input (device-file "/dev/input/by-id/usb-Gaming_KB_Gaming_KB-event-kbd")
+  output (uinput-sink "My KMonad output"
+    "/run/current-system/sw/bin/sleep 1 && /run/current-system/sw/bin/setxkbmap -option compose:ralt")
+  cmp-seq ralt    ;; Set the compose key to `RightAlt'
+
+  fallthrough true
+  allow-cmd true
+)
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     del  end  pgdn
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft                  up
+  lctl lmet lalt           spc                 ralt   cmp  rctl            left down rght
+)
+
+(defalias
+  cesc (tap-next-release esc lctrl)
+)
+
+(deflayer workman
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12        ssrq slck pause
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  ins  home pgup
+  tab  q    d    r    w    b    j    f    u    p    ;    [    ]    \     del  end  pgdn
+  @cesc a    s    h    t    g    y    n    e    o    i    '    ret
+  lsft z    x    m    c    v    k    l    ,    .    /    rsft                  up
+  lctl lmet lalt           spc                 ralt   cmp  rctl            left down rght
+)

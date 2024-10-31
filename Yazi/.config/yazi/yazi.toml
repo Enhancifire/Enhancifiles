@@ -1,0 +1,6 @@
+[manager]
+show_hidden = true
+ratio = [2, 4, 2]
+sort_dir_first = true
+linemode = "mtime"
+show_symlink = false

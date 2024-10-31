@@ -1,8 +1,9 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
-  font-family: JetBrainsMono Nerd Font;
+  font-family: FiraMono Nerd Font;
   font-size: 17px;
   /* border: 2px #B4A0E5; */
+  padding: 2px 2px;
 }
 
 window#waybar {
@@ -14,22 +15,28 @@ window#waybar {
   /* border-bottom: 4px transparent; */
   border-radius: 8px;
   transition-duration: 0.5s;
-  margin: 16px 16px;
+  /* margin: 16px 16px; */
+  margin: 20px 20px;
 }
 
 window#waybar.hidden {
   opacity: 0.8;
 }
 
+#workspaces {
+  font-size: 16px;
+}
+
 #workspaces button {
   padding: 0 5px;
-  color: #7984A4;
+  /* color: #7984A4; */
+  color: #f9e2af;
   background-color: transparent;
   /* Use box-shadow instead of border so the text isn't offset */
   box-shadow: inset 0 -3px transparent;
   /* Avoid rounded borders under each workspace name */
   border: none;
-  border-radius: 0;
+  border-radius: 10;
 }
 
 #workspaces button.focused {
@@ -38,7 +45,7 @@ window#waybar.hidden {
 
 #workspaces button.active {
   /* color: #6a92d7; */
-  color: #f9e2af;
+  color: #94e2d5;
 }
 
 #workspaces button.urgent {
@@ -315,6 +322,14 @@ label:focus {
   background-color: #1f2530;
   color: #abb2bf;
   border-radius: 9.5px;
+}
+
+#mpris.playing {
+  color: #ffffff;
+}
+
+#mpris.paused {
+  color: #abb2bf;
 }
 
 #custom-wallpaper {

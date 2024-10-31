@@ -1,0 +1,58 @@
+;; My Workman Layout for my Redragon K617 keyboard
+;; Aliases defined to make capslock act as esc and left ctrl.
+;; Bound g key to activate numpad layer when held down.
+
+;; Planning to bind shift, ctrl, meta and lalt to asht and neoi
+
+
+(defcfg
+  #|Side USB Port|#
+  #| input (device-file "/dev/input/by-path/pci-0000:05:00.4-usb-0:2:1.0-event-kbd") |#
+
+  #|USB to Right of HDMI|#
+  input (device-file "/dev/input/by-path/pci-0000:05:00.3-usb-0:2.1:1.0-event-kbd")
+  output (uinput-sink "My KMonad output")
+  cmp-seq ralt    ;; Set the compose key to `RightAlt'
+
+  fallthrough true
+  allow-cmd true
+)
+
+(defsrc
+  esc  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl lmet lalt           spc                 ralt   cmp  rctl
+)
+
+(defalias
+  cesc (tap-next esc lctrl)
+  ;; alttap (tap-next (layer-next qwerty) lalt)
+  gnum (tap-hold-next 500 g (layer-toggle numpad))
+)
+
+(deflayer workman
+  esc   1    2    3    4    5       6    7    8    9    0    -    =    bspc
+  tab   q    d    r    w    b       j    f    u    p    ;    [    ]    \
+  @cesc a    s    h    t    @gnum   y    n    e    o    i    '    ret
+  lsft  z    x    m    c    v       k    l    ,    .    /    rsft
+  lctl  lmet lalt           spc                 ralt   cmp  rctl
+)
+
+(deflayer qwerty
+
+  esc   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab   q    w    e    r    t    y    u    i    o    p    [    ]    \
+  _     a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft  z    x    c    v    b    n    m    ,    .    /    rsft
+  lctl  lmet lalt           spc                 ralt   cmp  rctl
+)
+
+(deflayer numpad
+  _   1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  _   _    _    _    _    _    _    7    8    9    0    _    _    _
+  _   _    _    _    _    _    _    4    5    6    _    _    _
+  _   _    _    _    _    _    _    1    2    3    _    _
+  _   _    _           _                 _   _  _
+)

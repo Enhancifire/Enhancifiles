@@ -8,6 +8,11 @@ profile {
 }
 
 profile {
+  output eDP-1 enable mode 1920x1200@165Hz position 0,0
+  output HDMI-A-1 enable mode 1920x1080@60 position 0,1200
+}
+
+profile {
   output HDMI-A-1 enable mode 1920x1080@60 position 2560,0
   output eDP-1 enable mode 2560x1600@60Hz position 0,0
 }

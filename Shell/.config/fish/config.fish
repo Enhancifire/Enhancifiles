@@ -35,6 +35,7 @@ set -x FZF_DEFAULT_COMMAND "rg --files --hidden"
 # Setting up functions
 if test -d ~/.config/fish/functions
   source ~/.config/fish/functions/testproject.fish
+  source ~/.config/fish/functions/yazi.fish
 end
 
 # Add ~/.local/bin to PATH

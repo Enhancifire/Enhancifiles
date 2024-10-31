@@ -47,4 +47,9 @@ alias mistral="ollama run mistral:instruct"
 alias ms="ollama run mistral:instruct"
 alias l2="ollama run llama2"
 
-alias led="ledger -f ~/Notes/Transactions/journal.ledger"
+alias led="hledger -f '~/Notes/08 - Transactions/Ledger - 2024.md'"
+
+if test -d "$HOME/Notes"
+  alias oo=~/.scripts/nvim-ob_open.sh
+  alias oon=~/.scripts/nvim-ob_new_note.sh
+end

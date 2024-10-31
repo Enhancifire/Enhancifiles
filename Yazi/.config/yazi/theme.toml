@@ -1,0 +1,6 @@
+[style]
+bg = "#1e1e2e"
+[flavor]
+use = "catppuccin-mocha"
+
+

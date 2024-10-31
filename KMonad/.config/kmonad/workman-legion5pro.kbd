@@ -1,0 +1,39 @@
+#|
+My Workman Layout for my Legion 5 Pro Laptop Keyboard
+|#
+
+
+(defcfg
+  input (device-file "/dev/input/by-path/pci-0000:05:00.3-usbv2-0:4:1.0-event-kbd")
+  output (uinput-sink "My KMonad output"
+)
+  cmp-seq ralt    ;; Set the compose key to `RightAlt'
+
+  fallthrough true
+  allow-cmd true
+)
+
+
+(defsrc
+  esc  f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12 ins cmp del 	home end pgup pgdn
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc  	nlck kp/ kp* kp-
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \     	kp7 kp8 kp9 kp+
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret	 	kp4 kp5 kp6
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft            	kp1 kp2 kp3 kprt
+  lctl lmet lalt           spc                 ralt   rctl       up     	kp0 kp.
+							   left down rght
+)
+
+(defalias
+  cesc (tap-next-release esc lctrl)
+)
+
+(deflayer workman
+  esc  	f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12 ins cmp del 	home end pgup pgdn
+  grv  	1    2    3    4    5    6    7    8    9    0    -    =    bspc  	nlck kp/ kp* kp-
+  tab  	q    d    r    w    b    j    f    u    p    ;    [    ]    \     	kp7 kp8 kp9 kp+
+  @cesc a    s    h    t    g    y    n    e    o    i    '    ret	 	kp4 kp5 kp6
+  lsft 	z    x    m    c    v    k    l    ,    .    /    rsft            	kp1 kp2 kp3 kprt
+  lctl 	lmet lalt           spc                 ralt   rctl       up     	kp0 kp.
+							   left down rght
+)
