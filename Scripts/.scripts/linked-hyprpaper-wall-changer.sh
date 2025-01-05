@@ -55,6 +55,13 @@ main() {
           sleep 1;
           hyprpaper &
           return
+        elif hyprctl activeworkspace | grep -q "eDP-2"; then
+          rm $HOME/Wallpapers/Hyprland/wall1
+          ln -s "${DIR}/${RANDOM_PIC}" $HOME/Wallpapers/Hyprland/wall1
+          killall -e hyprpaper &
+          sleep 1;
+          hyprpaper &
+          return
         elif hyprctl activeworkspace | grep -q "HDMI"; then
           rm $HOME/Wallpapers/Hyprland/wall2
           ln -s "${DIR}/${RANDOM_PIC}" $HOME/Wallpapers/Hyprland/wall2
@@ -67,6 +74,13 @@ main() {
 
     pic_index=$(echo $choice | cut -d. -f1)
     if hyprctl activeworkspace | grep -q "eDP-1"; then
+      rm $HOME/Wallpapers/Hyprland/wall1
+      ln -s "${DIR}/${PICS[$pic_index]}" $HOME/Wallpapers/Hyprland/wall1
+      killall -e hyprpaper &
+      sleep 1;
+      hyprpaper &
+      return
+    elif hyprctl activeworkspace | grep -q "eDP-2"; then
       rm $HOME/Wallpapers/Hyprland/wall1
       ln -s "${DIR}/${PICS[$pic_index]}" $HOME/Wallpapers/Hyprland/wall1
       killall -e hyprpaper &

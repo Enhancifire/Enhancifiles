@@ -1,0 +1,66 @@
+# By default Reload config with shft + cmd + ,
+
+theme = catppuccin-mocha
+background = #000000
+background-opacity = 0.65
+background-blur-radius = 15
+
+window-theme = ghostty
+window-decoration = false
+font-family = JetBrainsMonoNL Nerd Font
+font-size = 16
+cursor-style = block
+cursor-style-blink = false
+cursor-invert-fg-bg = true
+
+
+# macos-titlebar-style = hidden
+mouse-hide-while-typing = true
+
+confirm-close-surface = false
+window-padding-x = 10
+window-padding-y = 10
+window-padding-balance = true
+
+auto-update = check
+auto-update-channel = stable
+
+# extras
+shell-integration-features = no-cursor
+copy-on-select = clipboard
+
+# Custom Keybinds & Config (super represents cmd key on mac)
+# For Simple Keybinds
+# keybind = super+r=reload_config
+# keybind = super+i=inspector:toggle
+
+# Similar Tmux but with Ghostty
+# (ctrl b for tmux -> cmb b for ghostty)
+# keybind = super+b>r=reload_config
+# keybind = super+b>x=close_surface
+# this only works if you have `macos-titlebar-style = tabs or native or transparent`
+# else it behaves like new window
+# keybind = super+b>c=new_tab
+# keybind = super+b>n=new_window
+
+# tab nav
+# keybind = super+b>1=goto_tab:1
+# keybind = super+b>2=goto_tab:2
+# keybind = super+b>3=goto_tab:3
+# keybind = super+b>4=goto_tab:4
+# keybind = super+b>5=goto_tab:5
+# keybind = super+b>6=goto_tab:6
+# keybind = super+b>7=goto_tab:7
+# keybind = super+b>8=goto_tab:8
+# keybind = super+b>9=goto_tab:9
+
+# splitting
+# keybind = super+b>\=new_split:right
+# keybind = super+b>-=new_split:down
+# keybind = super+b>e=equalize_splits
+
+# split nav (setting this to control will not work if tmux already uses it)
+# keybind = super+b>h=goto_split:left
+# keybind = super+b>j=goto_split:bottom
+# keybind = super+b>k=goto_split:top
+# keybind = super+b>l=goto_split:right

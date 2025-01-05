@@ -1,2 +1,0 @@
-starship init fish | source
-set -gx LIBGL_ALWAYS_INDIRECT 1 #GWSL

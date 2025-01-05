@@ -48,9 +48,9 @@ main() {
 
     # random choice case
     if [ "$choice" = "$RANDOM_PIC_NAME" ]; then
-        if hyprctl activeworkspace | grep -q "eDP-1"; then
+        if hyprctl activeworkspace | grep -q "eDP-2"; then
           hyprctl hyprpaper preload ${DIR}/${RANDOM_PIC}
-          hyprctl hyprpaper wallpaper "eDP-1, ${DIR}/${RANDOM_PIC}"
+          hyprctl hyprpaper wallpaper "eDP-2, ${DIR}/${RANDOM_PIC}"
           return
         elif hyprctl activeworkspace | grep -q "HDMI"; then
           hyprctl hyprpaper preload ${DIR}/${RANDOM_PIC}
@@ -60,9 +60,9 @@ main() {
     fi
 
     pic_index=$(echo $choice | cut -d. -f1)
-    if hyprctl activeworkspace | grep -q "eDP-1"; then
+    if hyprctl activeworkspace | grep -q "eDP-2"; then
       hyprctl hyprpaper preload  ${DIR}/${PICS[$pic_index]}
-      hyprctl hyprpaper wallpaper "eDP-1, ${DIR}/${PICS[$pic_index]}"
+      hyprctl hyprpaper wallpaper "eDP-2, ${DIR}/${PICS[$pic_index]}"
     elif hyprctl activeworkspace | grep -q "HDMI"; then
       hyprctl hyprpaper preload  ${DIR}/${PICS[$pic_index]}
       hyprctl hyprpaper wallpaper "HDMI-A-1, ${DIR}/${PICS[$pic_index]}"
