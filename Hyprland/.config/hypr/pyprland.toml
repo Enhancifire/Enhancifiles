@@ -1,0 +1,12 @@
+[pyprland]
+plugins = [
+  "scratchpads",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "ghostty --class=dropterm"
+class = "dropterm"
+title = "dropterm"
+size = "80% 30%"
+margin = 50

@@ -1,1 +1,1 @@
-ghostty -e tmux -u new-session -A -s ReaperGaruda
+ghostty -e tmux -u new-session -A -s Kurisu

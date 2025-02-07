@@ -6,13 +6,13 @@
   },
   "scratchpads": {
     "term": {
-      "command": "kitty --class dropterm --title drop",
+      "command": "ghostty --class=dropterm --title=drop",
       "animation": "fromTop",
       "margin": 50,
       "unfocus": "hide"
     },
     "files": {
-      "command": "kitty --class ranger ranger",
+      "command": "ghostty --class=yazi -e yazi",
       "animation": "fromTop",
       "unfocus": "hide"
     }
