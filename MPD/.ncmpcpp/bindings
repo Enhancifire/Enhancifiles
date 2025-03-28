@@ -550,14 +550,16 @@
 #  quit
 #
 
-
-
-
-
 def_key "l"
   next_column
+def_key "l"
+  slave_screen
+
 def_key "h"
   previous_column
+def_key "h"
+  master_screen
+
 def_key "k"
   scroll_up
 def_key "j"
